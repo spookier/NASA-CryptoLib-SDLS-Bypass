@@ -12,6 +12,9 @@ NASA's CryptoLib fails to validate Security Association state before use, allowi
 
 **Can escalate to:** Complete spacecraft hijacking (key management exploit -> operator lockout -> permanent takeover)
 
+### 📄 **[Read the full technical writeup here](WRITEUP.md)** - Complete vulnerability analysis with attack scenarios
+
+
 ---
 
 #### Compilation Instructions:
@@ -33,6 +36,8 @@ cl /EHsc poc.cpp
 # Using MinGW
 g++ -std=c++11 poc.cpp -o poc.exe
 ```
+
+---
 
 
 ---
