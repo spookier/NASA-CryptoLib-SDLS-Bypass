@@ -51,7 +51,7 @@ Not every communication session is encrypted because spacecraft hardware is ofte
 
 #### The Frame Structure
 
-^521d3e
+
 
 Every command sent to the spacecraft is wrapped in a **TC (Telecommand) Transfer Frame**
 ```
@@ -114,7 +114,7 @@ sa[17..63].key = {0,0,0,...}
 
 ### 2.1 - The Vulnerable Code Path
 
-When [[#^521d3e|a frame]] arrives at the spacecraft, the system would use any slot it was told to use
+When a frame arrives at the spacecraft, the system would use any slot it was told to use
 It never checked if the slot was actually marked as ready (SA_OPERATIONAL) or not
 
 Here's what happens:
@@ -328,7 +328,7 @@ I've developed a C++ proof of concept that simulates NASA CryptoLib vulnerable
 initialization and frame processing code. The PoC demonstrates exactly how the 
 bug works without requiring any satellite hardware.
 
-**Full PoC available at:** https://github.com/spookier/NASA-CryptoLib-SDLS-Bypass
+**Full PoC available at:** [https://github.com/spookier/NASA-CryptoLib-SDLS-Bypass/main/PoC.cpp](https://github.com/spookier/NASA-CryptoLib-SDLS-Bypass/blob/main/PoC.cpp)
 
 ---
 
